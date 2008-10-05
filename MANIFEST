@@ -1,0 +1,15 @@
+Build.PL
+Changes
+lib/Net/RTorrent.pm
+lib/Net/RTorrent/DItem.pm
+lib/Net/RTorrent/Downloads.pm
+Makefile.PL
+MANIFEST
+README
+t/01_RTorrent.t
+t/02_default.t
+t/02_methods.t
+t/03_Downloads.t
+t/04_LoadRaw.t
+t/05_Stat.t
+META.yml

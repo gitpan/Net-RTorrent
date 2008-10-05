@@ -1,0 +1,9 @@
+Revision history for Perl extension Net::RTorrent.
+#$Id: Changes 356 2008-10-05 11:23:37Z zag $
+
+0.02
+    - add system_stat
+    - add load_raw
+
+0.01
+    - create classes
