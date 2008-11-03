@@ -14,40 +14,26 @@ unless ( $ENV{TEST_RPC_URL} ) {
     plan skip_all => "set TEST_RPC_URL for XML RPC SERVER";
 }
 else {
-    plan tests => 11;
+    plan tests => 5;
 }
 use_ok('Net::RTorrent');
 my $rpc_url = $ENV{TEST_RPC_URL};
 isa_ok my $obj = ( new Net::RTorrent:: $rpc_url ), 'Net::RTorrent',
   'create object';
-isa_ok my $dloads = $obj->_downloads, 'Net::RTorrent::Downloads',
-  'check download object';
-my $keys = $dloads->list_ids;
-ok @$keys, 'get list of keys';
-ok my $k1 = shift(@$keys), 'get first key';
-ok my $k2 = shift(@$keys), 'get second key';
-diag "$k1 \n$k2";
-
-foreach my $dl (@$keys) {
-    my $d = $dloads->fetch_one($dl);
-
-    #    diag join " ",@{$d->attr}{qw /hash up_total base_filename/}
-
+isa_ok my $cli = $obj->_cli, 'RPC::XML::Client', 'test cli attr';
+ok my $sys_stat  =  $obj->system_stat ,'get system_stat';
+ok $sys_stat->{pid}, 'check system.pid';
+diag my $dloads = $obj->_downloads;
+my $tid = '02DE69B09364A355F71279FC8825ADB0AC8C3A29';
+my $item = $dloads->get_one($tid);
+my $resp = $cli->send_request('d.erase', $tid);
+ if ( ref $resp ) {
+        my $res    = $resp->value;
 }
-
-#test for upload
-my $file = 't/setup_punto_switcher_30.exe.torrent';
-my $data;
-{
-    local $/ = undef;
-    open FH, $file;
-    $data = <FH>;
-    close FH;
-};
-diag length $data;
-my $resp = $obj->load_raw( $data, 0 );
-diag Dumper $resp->value;
-
+#$dloads->delete($tid);
+diag $item;
+#diag Dumper $dloads->list_ids;
+exit;
 #########################
 # Insert your test code below, the Test::More module is use()ed here so read
 # its man page ( perldoc Test::More ) for help writing this test script.

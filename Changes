@@ -1,6 +1,8 @@
 Revision history for Perl extension Net::RTorrent.
-#$Id: Changes 356 2008-10-05 11:23:37Z zag $
+#$Id: Changes 364 2008-11-03 14:37:21Z zag $
 
+0.03
+    - handle <detete> operation; clean torrent and downloaded files
 0.02
     - add system_stat
     - add load_raw

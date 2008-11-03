@@ -1,4 +1,4 @@
-#$Id: RTorrent.pm 355 2008-10-05 11:20:30Z zag $
+#$Id: RTorrent.pm 364 2008-11-03 14:37:21Z zag $
 
 package Net::RTorrent;
 
@@ -47,7 +47,7 @@ use constant {
 };
 
 our @ISA     = qw();
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 my $attrs = {
     _cli       => undef,
     _downloads => undef
@@ -116,15 +116,25 @@ sub get_downloads {
     return new Net::RTorrent::Downloads:: $self->_cli, $view;
 }
 
-=head2 load_raw [\$raw_data || new IO::File ], [1||0]
+=head2 load_raw [\$raw_data || new IO::File ], [ start_now=>1||0 , tag=><string>]
 
 load torrent from file descriptor or scalar ref.
 
+Params:
+
 =over 2 
 
-=item 1 - start download now (default)
+=item start_now  - start torent now
 
-=item 0 - not start download
+1 - start download now (default)
+
+0 - not start download
+
+=item tag - save <string> to rtorrent
+
+For read tag value use:
+
+    $ditem->tag
 
 =back
 
@@ -147,6 +157,7 @@ For example:
     print Dumper $obj->system_stat;
 
 Return:
+
         {
            'library_version' => '0.11.9',
            'max_memory_usage' => '-858993460', #  at my amd64 ?? 
@@ -236,7 +247,10 @@ Setup your rtorrent  and Web server. My tips:
 =head3 .rtorrent
 
    scgi_port = 10.100.0.1:5000 
-
+   #for complete erase
+   on_erase = erase_complete,"execute=rm,-rf,$d.get_base_path="
+   #or for save backup 
+   on_erase = move_complete,"execute=mv,-n,$d.get_base_path=,~/erased/ ;d.set_directory=~/erased"
 
 =head3 apache.conf
 

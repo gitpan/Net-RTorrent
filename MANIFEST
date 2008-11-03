@@ -12,4 +12,6 @@ t/02_methods.t
 t/03_Downloads.t
 t/04_LoadRaw.t
 t/05_Stat.t
+t/07_erase.t
+t/setup_punto_switcher_30.exe.torrent
 META.yml
