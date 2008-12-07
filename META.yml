@@ -1,6 +1,6 @@
 ---
 name: Net-RTorrent
-version: 0.03
+version: 0.04
 author:
   - 'Zahatski Aliaksandr, E<lt>zag@cpan.orgE<gt>'
 abstract: Perl interface to rtorrent via XML-RPC.
@@ -13,7 +13,7 @@ requires:
 provides:
   Net::RTorrent:
     file: lib/Net/RTorrent.pm
-    version: 0.03
+    version: 0.04
   Net::RTorrent::DItem:
     file: lib/Net/RTorrent/DItem.pm
     version: 0.01

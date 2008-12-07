@@ -1,4 +1,4 @@
-#$Id: Downloads.pm 364 2008-11-03 14:37:21Z zag $
+#$Id: Downloads.pm 376 2008-12-07 11:49:11Z zag $
 
 package Net::RTorrent::Downloads;
 
@@ -65,6 +65,7 @@ use constant {
         'd.get_up_rate='             => 'up_rate',
         'd.get_up_total='            => 'up_total',
         'd.get_uploads_max='         => 'uploads_max',
+        'd.get_custom2='             => 'custom2'
     ]
 };
 
