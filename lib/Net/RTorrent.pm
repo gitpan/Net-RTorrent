@@ -1,4 +1,4 @@
-#$Id: RTorrent.pm 542 2009-04-16 16:32:31Z zag $
+#$Id: RTorrent.pm 595 2009-08-15 18:29:58Z zag $
 
 package Net::RTorrent;
 
@@ -69,7 +69,7 @@ use constant {
     ],
 };
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 my $attrs = {
     _cli       => undef,
 };
