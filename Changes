@@ -1,6 +1,8 @@
 Revision history for Perl extension Net::RTorrent.
-#$Id: Changes 595 2009-08-15 18:29:58Z zag $
+#$Id: Changes 641 2009-11-14 12:49:02Z zag $
 
+0.08
+    -fix tests
 0.07
     - add is_active and is_open
 0.06
