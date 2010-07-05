@@ -1,4 +1,4 @@
-#$Id: Socket.pm 543 2009-04-16 16:33:00Z zag $
+#$Id: Socket.pm 805 2010-07-05 13:20:49Z zag $
 
 package Net::RTorrent::Socket;
 
@@ -8,6 +8,7 @@ use RPC::XML;
 use RPC::XML::Client;
 use IO::Socket::INET;
 use IO::Socket::UNIX;
+use RPC::XML::Parser;
 use Carp;
 use 5.005;
 

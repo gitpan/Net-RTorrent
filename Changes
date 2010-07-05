@@ -1,8 +1,13 @@
 Revision history for Perl extension Net::RTorrent.
-#$Id: Changes 641 2009-11-14 12:49:02Z zag $
+#$Id: Changes 805 2010-07-05 13:20:49Z zag $
 
-0.08
+0.09 05.07.2010
+    - add use directive  RPC::XML::Parser;
+    - comment buggy fields ( thanks Duff aka cmacduff@)
+
+0.08 05.07.2010 
     -fix tests
+
 0.07
     - add is_active and is_open
 0.06

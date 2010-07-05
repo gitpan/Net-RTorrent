@@ -6,6 +6,8 @@ lib/Net/RTorrent/Downloads.pm
 lib/Net/RTorrent/Socket.pm
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
+MYMETA.yml
 README
 t/01_RTorrent.t
 t/02_default.t

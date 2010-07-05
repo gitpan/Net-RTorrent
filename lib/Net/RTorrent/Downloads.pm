@@ -1,4 +1,4 @@
-#$Id: Downloads.pm 595 2009-08-15 18:29:58Z zag $
+#$Id: Downloads.pm 805 2010-07-05 13:20:49Z zag $
 
 package Net::RTorrent::Downloads;
 
@@ -34,11 +34,11 @@ use constant {
         'd.get_local_id='            => 'local_id',
         'd.get_local_id_html='       => 'local_id_html',
         'd.get_max_file_size='       => 'max_file_size',
-        'd.get_max_peers='           => 'max_peers',
+#        'd.get_max_peers='           => 'max_peers', 
         'd.get_max_size_pex='        => 'max_size_pex',
-        'd.get_max_uploads='         => 'max_uploads',
+#        'd.get_max_uploads='         => 'max_uploads',
         'd.get_message='             => 'message',
-        'd.get_min_peers='           => 'min_peers',
+#        'd.get_min_peers='           => 'min_peers',
         'd.get_name='                => 'name',
         'd.get_peer_exchange='       => 'peer_exchange',
         'd.get_peers_accounted='     => 'peers_accounted',
