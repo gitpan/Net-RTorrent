@@ -16,4 +16,4 @@ requires:
   RPC::XML: 0.63
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.09
+version: 0.10
