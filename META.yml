@@ -4,7 +4,7 @@ author:
   - 'Zahatski Aliaksandr, E<lt>zag@cpan.orgE<gt>'
 configure_requires:
   Module::Build: 0.36
-generated_by: 'Module::Build version 0.3601'
+generated_by: 'Module::Build version 0.3607'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -13,7 +13,7 @@ name: Net-RTorrent
 provides:
   Net::RTorrent:
     file: lib/Net/RTorrent.pm
-    version: 0.10
+    version: 0.11
   Net::RTorrent::DItem:
     file: lib/Net/RTorrent/DItem.pm
     version: 0.01
@@ -28,4 +28,4 @@ requires:
   RPC::XML: 0.63
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.10
+version: 0.11
